@@ -4,48 +4,56 @@
     {
         static void Main(string[] args)
         {
-            int[] array1 = { 10, 9, 41, 5, 17 };
-            int[] array2 = { 7, 9, 13, 25, 5, 17 };
-            Console.WriteLine("Array Before Deletion " + string.Join(", ", array1));
-            Console.WriteLine("Array After Deletion " + string.Join(", ", RemoveMiddleValue(array1))); // Output: 1, 2, 4, 5
-            Console.WriteLine("====================================================");
-            Console.WriteLine("Array Before Deletion " + string.Join(", ", array2));
-            Console.WriteLine("Array After Deletion " + string.Join(", ", RemoveMiddleValue(array2))); // Output: 1, 2, 4, 5
+            //Ex 1:
+            int[] arr1 = { 1, 2, 3, 4 };
+            int[] result1 = MiddleValue(arr1, 5);
+            Console.WriteLine(string.Join(", ", result1));
+            //Ex 2:
+            int[] arr2 = { 10, 20, 30, 40, 50 };
+            int[] result2 = MiddleValue(arr2, 25);
+            Console.WriteLine(string.Join(", ", result2));
+            //Ex 3:
+            int[] arr3 = { 7, 14, 21, 28 };
+            int[] result3 = MiddleValue(arr3, 10);
+            Console.WriteLine(string.Join(", ", result3));
 
             Console.ReadKey();
         }
 
-
-        public static int[] RemoveMiddleValue(int[] arr)
+        public static int[] MiddleValue(int[] arr, int value)
         {
             int length = arr.Length;
-            // If the array is empty, return it as is.
-            if (length == 0)
-                return arr;
-            // Get the length of the new array after deletion.
-            int newLength = (length % 2 == 0) ? length - 2 : length - 1;
-            int[] newArray = new int[newLength];
-            // Get the two middle index in the array.
-            int middleIndex1 = (length / 2) - 1;
-            int middleIndex2 = length / 2;
-            //index for the newArray
-            int j = 0;
-            for (int i = 0; i < length; i++)
+            int[] result = new int[length + 1];
+            // Calculate the middle index based on the length of the array.
+            int middleIndex;
+            //Even
+            if (length % 2 == 0)
             {
-                if (length % 2 == 0)
+
+                middleIndex = length / 2;
+            }
+            //Odd
+            else
+            {
+                middleIndex = length / 2 + 1;
+            }
+
+            int j = 0;
+            for (int i = 0; i <= length; i++)
+            {
+                // If the current index matches the middle index, assign the specified value.
+                if (i == middleIndex)
                 {
-                    // The length is even ---> skip the two middle elements.
-                    if (i == middleIndex1 || i == middleIndex2) continue;
+                    result[i] = value;
                 }
                 else
                 {
-                    // The length is odd ---> skip the single middle element.
-                    if (i == middleIndex2) continue;
+                    // Otherwise, assign the corresponding element from the input array.
+                    result[i] = arr[j++];
                 }
-                newArray[j++] = arr[i];
             }
 
-            return newArray;
+            return result;
         }
 
 
