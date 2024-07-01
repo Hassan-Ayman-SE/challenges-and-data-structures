@@ -4,38 +4,50 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
-            int[] array = { 15, 17, 12, 19, 13, 11, 16 };
-            int maximumValue = MaximumValue(array);
-            Console.WriteLine("Array elements: " + string.Join(", ", array));
-            Console.WriteLine("The Maximum value is: " + maximumValue);
+            int[] array1 = { 10, 9, 41, 5, 17 };
+            int[] array2 = { 7, 9, 13, 25, 5, 17 };
+            Console.WriteLine("Array Before Deletion " + string.Join(", ", array1));
+            Console.WriteLine("Array After Deletion " + string.Join(", ", RemoveMiddleValue(array1))); // Output: 1, 2, 4, 5
+            Console.WriteLine("====================================================");
+            Console.WriteLine("Array Before Deletion " + string.Join(", ", array2));
+            Console.WriteLine("Array After Deletion " + string.Join(", ", RemoveMiddleValue(array2))); // Output: 1, 2, 4, 5
 
             Console.ReadKey();
         }
 
-        public static int MaximumValue(int[] array)
+
+        public static int[] RemoveMiddleValue(int[] arr)
         {
-            //1- Check if the array empty or null and return -1
-            if (array.Length == 0 || array == null)
+            int length = arr.Length;
+            // If the array is empty, return it as is.
+            if (length == 0)
+                return arr;
+            // Get the length of the new array after deletion.
+            int newLength = (length % 2 == 0) ? length - 2 : length - 1;
+            int[] newArray = new int[newLength];
+            // Get the two middle index in the array.
+            int middleIndex1 = (length / 2) - 1;
+            int middleIndex2 = length / 2;
+            //index for the newArray
+            int j = 0;
+            for (int i = 0; i < length; i++)
             {
-                return -1;
-            }
-            //2- Taking the first value from the array and storing it in a variable called Max,
-            // assuming it is the largest value in the array
-            int max = array[0];
-
-            //3- Iterate through the array starting with second element
-            for (int i = 1; i < array.Length; i++)
-            {
-                //4- If the this element is greater than the max value --> update max
-                if (array[i] > max)
+                if (length % 2 == 0)
                 {
-                    max = array[i];
+                    // The length is even ---> skip the two middle elements.
+                    if (i == middleIndex1 || i == middleIndex2) continue;
                 }
+                else
+                {
+                    // The length is odd ---> skip the single middle element.
+                    if (i == middleIndex2) continue;
+                }
+                newArray[j++] = arr[i];
             }
 
-            return max;
+            return newArray;
         }
+
 
     }
 }
