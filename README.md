@@ -23,7 +23,7 @@
 
 
 ### Challenge 3: Remove Middle Value from Array
-[**Go to Challenge README**](whiteboard-challenges/remove-middle-value-from-array/README.md)
+[**Go to Challenge README**](challenges-and-data-structures/whiteboard-challenges/remove-middle-value-from-array/README.md)
 
 
 ---
