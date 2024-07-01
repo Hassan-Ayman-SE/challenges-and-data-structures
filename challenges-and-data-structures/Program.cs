@@ -5,74 +5,37 @@
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
-            //int[] array = { 1, 2, 3, 4, 5 };
-            //int[] reversedArray = ArrayReversal(array);
+            int[] array = { 15, 17, 12, 19, 13, 11, 16 };
+            int maximumValue = MaximumValue(array);
+            Console.WriteLine("Array elements: " + string.Join(", ", array));
+            Console.WriteLine("The Maximum value is: " + maximumValue);
 
-            //Console.WriteLine("Array Before Reverse: " + string.Join(", ", array));
-            //Console.WriteLine("Array After Reverse: " + string.Join(", ", reversedArray));
-
-            // Challenge B: Most Frequent Number
-            int[] array = { 1, 1, 2, 2, 3, 4, 5, 5, 5, 6 };
-            int mostFrequentNumber = FindMostFrequentNumber(array);
-            Console.WriteLine("Most frequent number: " + mostFrequentNumber);
             Console.ReadKey();
         }
 
-
-        //Challange A: Array Reversal
-        public static int[] ArrayReversal(int[] array)
+        public static int MaximumValue(int[] array)
         {
-            //get the length of the array
-            int arrLength = array.Length;
-            //create a reversed array with the same length of original array.
-            int[] reversedArray = new int[arrLength];
-
-            //for loop to store numbers in reversedArray
-            for (int i = 0; i < arrLength; i++)
+            //1- Check if the array empty or null and return -1
+            if (array.Length == 0 || array == null)
             {
-                reversedArray[i] = array[arrLength - i - 1];
+                return -1;
+            }
+            //2- Taking the first value from the array and storing it in a variable called Max,
+            // assuming it is the largest value in the array
+            int max = array[0];
+
+            //3- Iterate through the array starting with second element
+            for (int i = 1; i < array.Length; i++)
+            {
+                //4- If the this element is greater than the max value --> update max
+                if (array[i] > max)
+                {
+                    max = array[i];
+                }
             }
 
-            return reversedArray;
+            return max;
         }
-
-
-        // Challenge B: Most Frequent Number
-        public static int FindMostFrequentNumber(int[] array)
-        {
-            // Use dictionary to store number counts
-            Dictionary<int, int> numberCounts = new Dictionary<int, int>();
-            // Count each number how many times it occurs in the array 
-            foreach (int number in array)
-            {
-                if (numberCounts.ContainsKey(number))
-                {
-                    // If number already exists in the dictionary increment its count
-                    numberCounts[number]++;
-                }
-                else
-                {
-                    // If number does not exist in the dictionary add it with initial count 1
-                    numberCounts[number] = 1;
-                }
-            }
-            int mostFrequentNumber = array[0];
-            int maxCount = 1;
-            // Find number with the maximum count
-            foreach (var item in numberCounts)
-            {
-                if (item.Value > maxCount)
-                {
-                    // If current count is higher than the previous maxCount
-                    // update mostFrequentNumber and maxCount
-                    mostFrequentNumber = item.Key;
-                    maxCount = item.Value;
-                }
-            }
-            // Return the most frequent number
-            return mostFrequentNumber;
-        }
-
 
     }
 }
