@@ -36,7 +36,7 @@
 ---
 
 ### Challenge 5: Find duplicates
-[**Go to Challenge README**](challenges-and-data-structures/whiteboard-challenges/Find-Duplicates/README.md)
+[**Go to Challenge README**](https://github.com/Hassan-Ayman-SE/challenges-and-data-structures/blob/master/challenges-and-data-structures/whiteboard-challenges/find-duplicates/README.md#challenge-05-find-duplicates-in-array)
 
 
 ---
