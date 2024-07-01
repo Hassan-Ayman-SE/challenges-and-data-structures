@@ -4,58 +4,49 @@
     {
         static void Main(string[] args)
         {
-            //Ex 1:
-            int[] arr1 = { 1, 2, 3, 4 };
-            int[] result1 = MiddleValue(arr1, 5);
-            Console.WriteLine(string.Join(", ", result1));
+            int[] input1 = { 1, 2, 3, 1, 2, 3 };
+            int[] result1 = FindDuplicates(input1);
+            Console.WriteLine(string.Join(", ", result1));  //Expected Output: 1, 2, 3
+
             //Ex 2:
-            int[] arr2 = { 10, 20, 30, 40, 50 };
-            int[] result2 = MiddleValue(arr2, 25);
-            Console.WriteLine(string.Join(", ", result2));
+            int[] input2 = { 16, 8, 31, 17, 15, 23, 17, 8 };
+            int[] result2 = FindDuplicates(input2);
+            Console.WriteLine(string.Join(", ", result2));  //Expected Output: 17, 8
+
             //Ex 3:
-            int[] arr3 = { 7, 14, 21, 28 };
-            int[] result3 = MiddleValue(arr3, 10);
-            Console.WriteLine(string.Join(", ", result3));
+            int[] input3 = { 5, 10, 16, 20, 10, 16 };
+            int[] result3 = FindDuplicates(input3);
+            Console.WriteLine(string.Join(", ", result3));  //Expected Output: 10, 16
+
 
             Console.ReadKey();
         }
 
-        public static int[] MiddleValue(int[] arr, int value)
+        public static int[] FindDuplicates(int[] arr)
         {
-            int length = arr.Length;
-            int[] result = new int[length + 1];
-            // Calculate the middle index based on the length of the array.
-            int middleIndex;
-            //Even
-            if (length % 2 == 0)
-            {
+            // Create a dictionary to store the frequency of each number.
+            Dictionary<int, int> frequencyNumbers = new Dictionary<int, int>();
 
-                middleIndex = length / 2;
-            }
-            //Odd
-            else
+            foreach (int num in arr)
             {
-                middleIndex = length / 2 + 1;
+                frequencyNumbers[num] = frequencyNumbers.ContainsKey(num) ? frequencyNumbers[num] + 1 : 1;
             }
 
-            int j = 0;
-            for (int i = 0; i <= length; i++)
+            // Create a list to store the duplicate values.
+            List<int> duplicatesNunberList = new List<int>();
+
+            // Add the elements with frequency greater than 1 to the duplicates list.
+            foreach (KeyValuePair<int, int> kvp in frequencyNumbers)
             {
-                // If the current index matches the middle index, assign the specified value.
-                if (i == middleIndex)
+                if (kvp.Value > 1)
                 {
-                    result[i] = value;
-                }
-                else
-                {
-                    // Otherwise, assign the corresponding element from the input array.
-                    result[i] = arr[j++];
+                    duplicatesNunberList.Add(kvp.Key);
                 }
             }
 
-            return result;
+            // Convert the list to an array and return the result.
+            return duplicatesNunberList.ToArray();
         }
-
 
     }
 }
