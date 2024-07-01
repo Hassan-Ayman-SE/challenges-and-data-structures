@@ -42,7 +42,7 @@
 ---
 
 ### Challenge 6 A: Common elements
-[**Go to Challenge README**](challenges-and-data-structures/Challenges/Common-Elements/README.md)
+[**Go to Challenge README**](https://github.com/Hassan-Ayman-SE/challenges-and-data-structures/blob/master/challenges-and-data-structures/Challenges/Common-Elements/README.md#challenge-6-common-elements)
 
 
 ---
