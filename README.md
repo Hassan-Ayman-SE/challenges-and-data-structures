@@ -30,7 +30,7 @@
 
 
 ### Challenge 4: Middle Value
-[**Go to Challenge README**](challenges-and-data-structures/whiteboard-challenges/middle-value/README.md)
+[**Go to Challenge README**](https://github.com/Hassan-Ayman-SE/challenges-and-data-structures/blob/master/challenges-and-data-structures/whiteboard-challenges/insert-middle-value/README.md#challenge-04-insert-value-in-middle-of-array)
 
 
 ---
