@@ -1,30 +1,49 @@
 using challenges_and_data_structures;
+using Microsoft.VisualStudio.TestPlatform.ObjectModel.Utilities;
 
 namespace ChallengesTests
 {
     public class UnitTest1
     {
         [Fact]
-        public void Test_CommonElements_Case1()
+        public void ReverseWords_InputIsProgrammingLanguage_ShouldReturnLanguageProgrammingIsCsharp()
         {
-            int[] array1 = { 1, 2, 3, 0 };
-            int[] array2 = { 2, 3, 4, 9 };
-            int[] expected = { 2, 3 };
+            // Arrange
+            var input = "csharp is programming language";
+            var expected = "language programming is csharp";
 
-            int[] result = Program.CommonElements(array1, array2);
+            // Act
+            var result = Program.ReverseWords(input);
 
+            // Assert
             Assert.Equal(expected, result);
         }
 
         [Fact]
-        public void Test_CommonElements_Case2()
+        public void ReverseWords_ReverseTheWordsInThisSentence_ShouldReturnSentenceThisInWordsTheReverse()
         {
-            int[] array1 = { 79, 8, 15 };
-            int[] array2 = { 23, 79, 8 };
-            int[] expected = { 79, 8 };
+            // Arrange
+            var input = "Reverse the words in this sentence";
+            var expected = "sentence this in words the Reverse";
 
-            int[] result = Program.CommonElements(array1, array2);
+            // Act
+            var result = Program.ReverseWords(input);
 
+            // Assert
+            Assert.Equal(expected, result);
+        }
+
+        [Fact]
+        public void ReverseWords_ChallengesAndDataStructures_ShouldReturnStructuresDataAndChallenges()
+        {
+            // Arrange
+            var input = "challenges and data structures";
+            var expected = "structures data and challenges";
+
+            // Act
+            var result = Program.ReverseWords(input);
+
+            // Assert
             Assert.Equal(expected, result);
         }
 
