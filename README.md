@@ -52,7 +52,12 @@
 
 ---
 
-### Linked List Implementation
+### Challenge 7 A: Linked List Implementation
 [**Go to Challenge README**](https://github.com/Hassan-Ayman-SE/challenges-and-data-structures/blob/master/challenges-and-data-structures/Data-Structures/LinkedList/README.md#linked-list-implementation)
+
+---
+
+### Challenge 7 B: Linked List Remove Duplicates
+[**Go to Challenge README**](https://github.com/Hassan-Ayman-SE/challenges-and-data-structures/blob/master/challenges-and-data-structures/Data-Structures/LinkedList/README.md#linked-list-remove-duplicates-whiteboard-image)
 
 ---
