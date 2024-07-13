@@ -71,6 +71,28 @@ namespace challenges_and_data_structures.Data_Structures.LinkedList
             previous.Next = current.Next;
         }
 
+        //ADD RemoveDuplicate() Method
+        public void RemoveDuplicate()
+        {
+            Node current = head;
+            while (current != null && current.Next != null)
+            {
+                Node index = current;
+                while (index.Next != null)
+                {
+                    if (current.Data == index.Next.Data)
+                    {
+                        index.Next = index.Next.Next;
+                    }
+                    else
+                    {
+                        index = index.Next;
+                    }
+                }
+                current = current.Next;
+            }
+        }
+
         public void PrintList()
         {
             Node? current = head;
