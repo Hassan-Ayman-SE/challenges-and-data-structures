@@ -6,24 +6,26 @@ namespace challenges_and_data_structures
     {
         static void Main(string[] args)
         {
-            LinkedList list = new LinkedList();
+            LinkedList list1 = new LinkedList();
+            list1.Add(1);
+            list1.Add(3);
+            list1.Add(5);
 
-            // Add nodes to the list
-            list.Add(7);
-            list.Add(7);
-            list.Add(7);
-            list.Add(7);
-            list.Add(7);
-            list.Add(7);
+            LinkedList list2 = new LinkedList();
+            list2.Add(2);
+            list2.Add(4);
+            list2.Add(6);
 
-            // Print the list
-            Console.WriteLine("Original list:");
-            list.PrintList(); 
+            Console.WriteLine("List 1:");
+            list1.PrintList();
 
-            // Remove duplicates
-            Console.WriteLine("Removing duplicates:");
-            list.RemoveDuplicate();
-            list.PrintList(); 
+            Console.WriteLine("List 2:");
+            list2.PrintList();
+
+            LinkedList mergedList = LinkedList.MergeSortedLists(list1, list2);
+            Console.WriteLine("Merged List:");
+            mergedList.PrintList();
+
             Console.ReadKey();
         }
    
