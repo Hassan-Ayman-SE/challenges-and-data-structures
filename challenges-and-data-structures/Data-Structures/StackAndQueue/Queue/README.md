@@ -1,4 +1,4 @@
-# Linked List Implementation
+# Queue Implementation
 ### Implement a basic queue data structure with operations for adding, removing, peeking, and checking if empty.
 
 ## Whiteboard image:
