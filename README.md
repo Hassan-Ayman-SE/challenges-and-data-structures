@@ -68,11 +68,11 @@
 ---
 
 ### Challenge 9 A: Stack Implementation
-[**Go to Challenge README**]()
+[**Go to Challenge README**](https://github.com/Hassan-Ayman-SE/challenges-and-data-structures/blob/master/challenges-and-data-structures/Data-Structures/StackAndQueue/Stack/README.md#stack-implementation)
 
 ---
 
 ### Challenge 9 B: Queue Implementation
-[**Go to Challenge README**]()
+[**Go to Challenge README**](https://github.com/Hassan-Ayman-SE/challenges-and-data-structures/blob/master/challenges-and-data-structures/Data-Structures/StackAndQueue/Queue/README.md#queue-implementation)
 
 ---
