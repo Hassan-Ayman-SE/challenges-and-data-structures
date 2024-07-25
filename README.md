@@ -66,3 +66,13 @@
 [**Go to Challenge README**](https://github.com/Hassan-Ayman-SE/challenges-and-data-structures/blob/master/challenges-and-data-structures/Data-Structures/LinkedList/MergeSorted/README.md#linked-list-merge-sorted-lists)
 
 ---
+
+### Challenge 9 A: Stack Implementation
+[**Go to Challenge README**]()
+
+---
+
+### Challenge 9 B: Queue Implementation
+[**Go to Challenge README**]()
+
+---
