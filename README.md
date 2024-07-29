@@ -76,3 +76,8 @@
 [**Go to Challenge README**](https://github.com/Hassan-Ayman-SE/challenges-and-data-structures/blob/master/challenges-and-data-structures/Data-Structures/StackAndQueue/Queue/README.md#queue-implementation)
 
 ---
+
+### Challenge 9 C: Reverse Stack Using Queue
+[**Go to Challenge README**](https://github.com/Hassan-Ayman-SE/challenges-and-data-structures/blob/master/challenges-and-data-structures/Data-Structures/StackAndQueue/ReverseStackUsingQueue/README.md#reverse-a-stack-using-queue)
+
+---
