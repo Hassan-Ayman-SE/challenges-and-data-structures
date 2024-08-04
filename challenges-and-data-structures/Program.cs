@@ -1,4 +1,5 @@
-﻿using challenges_and_data_structures.Data_Structures.StackAndQueue.Queue;
+﻿using challenges_and_data_structures.Data_Structures.StackAndQueue.DeleteMiddleElement;
+using challenges_and_data_structures.Data_Structures.StackAndQueue.Queue;
 using challenges_and_data_structures.Data_Structures.StackAndQueue.ReverseStackUsingQueue;
 using challenges_and_data_structures.Data_Structures.StackAndQueue.Stack;
 
@@ -8,30 +9,31 @@ namespace challenges_and_data_structures
     {
         static void Main(string[] args)
         {
-            StackWithReverse stack = new StackWithReverse();
-            stack.Push(1);
-            stack.Push(2);
-            stack.Push(3);
-            stack.Push(4);
-            stack.Push(5);
-            Console.WriteLine("Ex 1:");
-            Console.WriteLine(stack); // Stack: Top -> 5 -> 4 -> 3 -> 2 -> 1
-            
-            stack.ReverseStack();
-            Console.WriteLine("After Reveresed: ");
-            Console.WriteLine(stack); // Stack: Top -> 1 -> 2 -> 3 -> 4 -> 5
-
-            stack.Push(6);
+            StackWithDeleteMiddle stack = new StackWithDeleteMiddle();
             stack.Push(7);
-            Console.WriteLine("====================================================");
-            Console.WriteLine("Ex 2:");
-            Console.WriteLine(stack); // Stack: Top -> 7 -> 6 -> 1 -> 2 -> 3 -> 4 -> 5
+            stack.Push(14);
+            stack.Push(3);
+            stack.Push(8);
+            stack.Push(5);
 
-            stack.ReverseStack();
-            Console.WriteLine("After Reveresed: ");
-            Console.WriteLine(stack); // Stack: Top -> 5 -> 4 -> 3 -> 2 -> 1 -> 6 -> 7
+            Console.WriteLine(stack); // Output: Stack: Top -> 5 -> 8 -> 3 -> 14 -> 7
+            Console.WriteLine("After Deleted Middle Element: ");
+            stack.DeleteMiddle();
+            Console.WriteLine(stack); // Output: Stack: Top -> 5 -> 8 -> 14 -> 7
+
+            Console.WriteLine("=====================================================");
+            Console.WriteLine("Ex2:");
+
+            
+            stack.Push(9);
+            stack.Push(11);
+            Console.WriteLine(stack); // Output: Stack: Top -> 11 -> 9 -> 2 -> 5 -> 8 -> 14 -> 7
+            Console.WriteLine("After Deleted Middle Element: ");
+            stack.DeleteMiddle();
+            Console.WriteLine(stack); // Output: Stack: Top -> 11 -> 9 -> 2 -> 8 -> 14 -> 7
             Console.ReadKey();
+
         }
-   
+
     }
 }
