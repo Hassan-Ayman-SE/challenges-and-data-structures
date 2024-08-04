@@ -81,3 +81,10 @@
 [**Go to Challenge README**](https://github.com/Hassan-Ayman-SE/challenges-and-data-structures/blob/master/challenges-and-data-structures/Data-Structures/StackAndQueue/ReverseStackUsingQueue/README.md#reverse-a-stack-using-queue)
 
 ---
+
+---
+
+### Challenge 9 D: Delete Middle Element of a Stack
+[**Go to Challenge README**](https://github.com/Hassan-Ayman-SE/challenges-and-data-structures/blob/master/challenges-and-data-structures/Data-Structures/StackAndQueue/DeleteMiddleElement/README.md#delete-middle-element-of-a-stack)
+
+---
