@@ -91,3 +91,8 @@
 [**Go to Challenge README**](https://github.com/Hassan-Ayman-SE/challenges-and-data-structures/blob/master/challenges-and-data-structures/Data-Structures/StackAndQueue/MinStack/README.md#minimum-element-in-a-stack)
 
 ---
+
+### Challenge 10: Tree Implementation
+[**Go to Challenge README**](https://github.com/Hassan-Ayman-SE/challenges-and-data-structures/blob/master/challenges-and-data-structures/Data-Structures/Trees/TreeImplementation/README.md#binary-tree-and-binary-search-tree-in-c)
+
+---
