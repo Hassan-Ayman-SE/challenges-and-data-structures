@@ -3,6 +3,7 @@ using challenges_and_data_structures.Data_Structures.StackAndQueue.MinStack;
 using challenges_and_data_structures.Data_Structures.StackAndQueue.Queue;
 using challenges_and_data_structures.Data_Structures.StackAndQueue.ReverseStackUsingQueue;
 using challenges_and_data_structures.Data_Structures.StackAndQueue.Stack;
+using challenges_and_data_structures.Data_Structures.Trees.TreeImplementation;
 
 namespace challenges_and_data_structures
 {
@@ -10,35 +11,35 @@ namespace challenges_and_data_structures
     {
         static void Main(string[] args)
         {
-            MinStack minStack = new MinStack();
+            BinarySearchTree bst = new BinarySearchTree();
 
-            minStack.Push(15); // Top -> 15 (min: 15)
-            minStack.Push(7);  // Top -> 7 -> 15 (min: 7) 
-            minStack.Push(12); // Top -> 12 -> 7 -> 15 (min: 7)
-            minStack.Push(3);  // Top -> 3 -> 12 -> 7 -> 15 (min: 3) 
+            // Add nodes to the BST
+            bst.Add(10);
+            bst.Add(5);
+            bst.Add(15);
+            bst.Add(7);
 
-            minStack.PrintStack(); // Output: Top -> 3 -> 12 -> 7 -> 15
+            // Display the tree
+            Console.WriteLine("Binary Search Tree:");
+            Console.ForegroundColor = ConsoleColor.Green;
+            bst.Print(bst.Root);
 
-            int min = minStack.GetMin(); // min: 3
-            Console.WriteLine($"Min: {min}");
+            // Check if a node exists
+            bool contains = bst.Contains(7); // contains: true
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine($"Contains 7: {contains}");
 
-            int popped = minStack.Pop(); // popped: 3
-            minStack.PrintStack(); // Output: Top -> 12 -> 7 -> 15
+            // Remove a node
+            bst.Remove(5);
+            Console.WriteLine("\nAfter removing 5:");
+            Console.ForegroundColor = ConsoleColor.Green;
+            bst.Print(bst.Root);
 
-            min = minStack.GetMin(); // min: 7
-            Console.WriteLine($"Min: {min}");
+            // Check if the node is removed
+            contains = bst.Contains(5); // contains: false
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine($"Contains 5: {contains}");
 
-            int peeked = minStack.Top(); // peeked: 12
-            Console.WriteLine($"Top: {peeked}");
-
-            minStack.Push(2);  // Top -> 2 -> 12 -> 7 -> 15 (min: 2)
-            minStack.PrintStack(); // Output: Top -> 2 -> 12 -> 7 -> 15
-
-            min = minStack.GetMin(); // min: 2
-            Console.WriteLine($"Min: {min}");
-
-            bool isEmpty = minStack.IsEmpty(); // isEmpty: false
-            //Console.WriteLine($"Is Empty: {isEmpty}");
             Console.ReadKey();
 
         }
