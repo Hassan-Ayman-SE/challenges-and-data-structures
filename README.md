@@ -92,7 +92,12 @@
 
 ---
 
-### Challenge 10: Tree Implementation
+### Challenge 10 A: Tree Implementation
 [**Go to Challenge README**](https://github.com/Hassan-Ayman-SE/challenges-and-data-structures/blob/master/challenges-and-data-structures/Data-Structures/Trees/TreeImplementation/README.md#binary-tree-and-binary-search-tree-in-c)
+
+---
+
+### Challenge 10 B: Binary Tree - Mirror Tree
+[**Go to Challenge README**](https://github.com/Hassan-Ayman-SE/challenges-and-data-structures/blob/master/challenges-and-data-structures/Data-Structures/Trees/MirrorTree/README.md#binary-tree-mirror-project)
 
 ---
