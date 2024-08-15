@@ -13,7 +13,7 @@ This project implements two fundamental data structures: a Binary Tree and a Bin
 
 ## Code run:
 
-![Code run](trees-run.png)
+![Code run](trees-run.PNG)
 
 ## Features
 

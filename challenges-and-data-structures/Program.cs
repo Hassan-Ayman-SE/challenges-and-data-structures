@@ -3,6 +3,7 @@ using challenges_and_data_structures.Data_Structures.StackAndQueue.MinStack;
 using challenges_and_data_structures.Data_Structures.StackAndQueue.Queue;
 using challenges_and_data_structures.Data_Structures.StackAndQueue.ReverseStackUsingQueue;
 using challenges_and_data_structures.Data_Structures.StackAndQueue.Stack;
+using challenges_and_data_structures.Data_Structures.Trees.MirrorTree;
 using challenges_and_data_structures.Data_Structures.Trees.TreeImplementation;
 
 namespace challenges_and_data_structures
@@ -11,34 +12,21 @@ namespace challenges_and_data_structures
     {
         static void Main(string[] args)
         {
-            BinarySearchTree bst = new BinarySearchTree();
+            BinaryTreeMirror Btree = new BinaryTreeMirror();
+            Btree.Root = new TNode(4);
+            Btree.Root.Left = new TNode(8);
+            Btree.Root.Right = new TNode(7);
+            Btree.Root.Left.Left = new TNode(12);
+            Btree.Root.Left.Right = new TNode(9);
 
-            // Add nodes to the BST
-            bst.Add(10);
-            bst.Add(5);
-            bst.Add(15);
-            bst.Add(7);
+            List<int> originalInorder = Btree.InorderTraversal(); // Output: [12, 8, 9, 4, 7]
+            Console.WriteLine(string.Join(", ", originalInorder));
 
-            // Display the tree
-            Console.WriteLine("Binary Search Tree:");
-            Console.ForegroundColor = ConsoleColor.Green;
-            bst.Print(bst.Root);
+            Btree.MirrorTree();
 
-            // Check if a node exists
-            bool contains = bst.Contains(7); // contains: true
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine($"Contains 7: {contains}");
+            List<int> mirroredInorder = Btree.InorderTraversal(); // Output: [7, 4, 9, 8, 12]
+            Console.WriteLine(string.Join(", ", mirroredInorder));
 
-            // Remove a node
-            bst.Remove(5);
-            Console.WriteLine("\nAfter removing 5:");
-            Console.ForegroundColor = ConsoleColor.Green;
-            bst.Print(bst.Root);
-
-            // Check if the node is removed
-            contains = bst.Contains(5); // contains: false
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine($"Contains 5: {contains}");
 
             Console.ReadKey();
 
