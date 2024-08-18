@@ -12,22 +12,18 @@ namespace challenges_and_data_structures
     {
         static void Main(string[] args)
         {
-            BinaryTreeMirror Btree = new BinaryTreeMirror();
-            Btree.Root = new TNode(4);
-            Btree.Root.Left = new TNode(8);
-            Btree.Root.Right = new TNode(7);
-            Btree.Root.Left.Left = new TNode(12);
-            Btree.Root.Left.Right = new TNode(9);
+            BinaryTree Btree = new BinaryTree();
+            Btree.Root = new TNode(10);
+            Btree.Root.Left = new TNode(5);
+            Btree.Root.Right = new TNode(20);
+            Btree.Root.Left.Left = new TNode(3);
+            Btree.Root.Left.Right = new TNode(7);
+            Btree.Root.Right.Left = new TNode(15);
+            Btree.Root.Right.Right = new TNode(25);
 
-            List<int> originalInorder = Btree.InorderTraversal(); // Output: [12, 8, 9, 4, 7]
-            Console.WriteLine(string.Join(", ", originalInorder));
-
-            Btree.MirrorTree();
-
-            List<int> mirroredInorder = Btree.InorderTraversal(); // Output: [7, 4, 9, 8, 12]
-            Console.WriteLine(string.Join(", ", mirroredInorder));
-
-
+            Btree.Print(Btree.Root);//Print Binary Tree Elements
+            int secondMax = Btree.FindSecondMax(); // Output: 20
+            Console.WriteLine("Second Max In Binary Tree: " + secondMax);
             Console.ReadKey();
 
         }
