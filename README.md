@@ -101,3 +101,8 @@
 [**Go to Challenge README**](https://github.com/Hassan-Ayman-SE/challenges-and-data-structures/blob/master/challenges-and-data-structures/Data-Structures/Trees/MirrorTree/README.md#binary-tree-mirror-project)
 
 ---
+
+### Challenge 10 c: Binary Tree - Second Maximum Value
+[**Go to Challenge README**](https://github.com/Hassan-Ayman-SE/challenges-and-data-structures/blob/master/challenges-and-data-structures/Data-Structures/Trees/SecondMaxValue/README.md#binary-tree---second-maximum-value)
+
+---
