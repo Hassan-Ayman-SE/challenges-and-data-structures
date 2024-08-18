@@ -102,7 +102,7 @@
 
 ---
 
-### Challenge 10 c: Binary Tree - Second Maximum Value
+### Challenge 10 C: Binary Tree - Second Maximum Value
 [**Go to Challenge README**](https://github.com/Hassan-Ayman-SE/challenges-and-data-structures/blob/master/challenges-and-data-structures/Data-Structures/Trees/SecondMaxValue/README.md#binary-tree---second-maximum-value)
 
 ---
