@@ -106,3 +106,8 @@
 [**Go to Challenge README**](https://github.com/Hassan-Ayman-SE/challenges-and-data-structures/blob/master/challenges-and-data-structures/Data-Structures/Trees/SecondMaxValue/README.md#binary-tree---second-maximum-value)
 
 ---
+
+### Challenge 10 D: Binary Tree - Sum of leaf nodes
+[**Go to Challenge README**](https://github.com/Hassan-Ayman-SE/challenges-and-data-structures/blob/master/challenges-and-data-structures/Data-Structures/Trees/LeafSum/README.md#binary-tree---sum-of-leaf-nodes)
+
+---
