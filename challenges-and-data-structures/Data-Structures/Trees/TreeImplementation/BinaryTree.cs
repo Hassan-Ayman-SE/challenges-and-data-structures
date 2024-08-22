@@ -71,6 +71,20 @@ namespace challenges_and_data_structures.Data_Structures.Trees.TreeImplementatio
             Traverse(node.Left);
             Traverse(node.Right);
         }
+
+        // Sum of leaf nodes
+        public int SumOfLeafNodes()
+        {
+            return SumLeafNodes(Root);
+        }
+
+        private int SumLeafNodes(TNode node)
+        {
+            if (node == null) return 0;
+            if (node.Left == null && node.Right == null) return node.Data;
+            return SumLeafNodes(node.Left) + SumLeafNodes(node.Right);
+        }
+
         public void Print(TNode node, string indent = "", bool isLeft = true)
         {
             if (node == null)
