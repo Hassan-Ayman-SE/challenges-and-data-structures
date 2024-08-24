@@ -85,6 +85,35 @@ namespace challenges_and_data_structures.Data_Structures.Trees.TreeImplementatio
             return SumLeafNodes(node.Left) + SumLeafNodes(node.Right);
         }
 
+        // Binary Tree - Largest Value at Each Level
+        public List<int> LargestValueEachLevel()
+        {
+            List<int> result = new List<int>();
+            if (Root == null)
+                return result;
+
+            Queue<TNode> queue = new Queue<TNode>();
+            queue.Enqueue(Root);
+
+            while (queue.Count > 0)
+            {
+                int levelSize = queue.Count;
+                int maxVal = int.MinValue;
+
+                for (int i = 0; i < levelSize; i++)
+                {
+                    TNode currentNode = queue.Dequeue();
+                    maxVal = Math.Max(maxVal, currentNode.Data);
+
+                    if (currentNode.Left != null) queue.Enqueue(currentNode.Left);
+                    if (currentNode.Right != null) queue.Enqueue(currentNode.Right);
+                }
+                result.Add(maxVal);
+            }
+            return result;
+        }
+
+
         public void Print(TNode node, string indent = "", bool isLeft = true)
         {
             if (node == null)
