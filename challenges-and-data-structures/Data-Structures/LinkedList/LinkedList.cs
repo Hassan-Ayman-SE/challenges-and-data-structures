@@ -8,7 +8,7 @@ namespace challenges_and_data_structures.Data_Structures.LinkedList
 {
     public class LinkedList
     {
-        private Node? head;
+        public Node? head;
 
         public LinkedList()
         {
@@ -91,6 +91,37 @@ namespace challenges_and_data_structures.Data_Structures.LinkedList
                 }
                 current = current.Next;
             }
+        }
+
+        //RotateLinkedList
+        public void RotateLeft(int k)
+        {
+            //Base case: rotation is needed
+            if (head == null || k == 0) return;
+
+            Node current = head;
+            int length = 1;
+            //find the length of linked list
+            while (current.Next != null)
+            {
+                length++;
+                current = current.Next;
+            }
+
+            k = k % length;
+            if (k == 0) return;
+
+            current.Next = head; // Connect tail to head (make it circular)
+            current = head;
+
+            //move to the (k-1)th node which will become the new tail
+            for (int i = 1; i < k; i++)
+            {
+                current = current.Next;
+            }
+
+            head = current.Next;
+            current.Next = null; // Break the loop
         }
 
         public static LinkedList MergeSortedLists(LinkedList list1, LinkedList list2)
