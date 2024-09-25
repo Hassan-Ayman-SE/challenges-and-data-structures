@@ -116,3 +116,8 @@
 [**Go to Challenge README**](https://github.com/Hassan-Ayman-SE/challenges-and-data-structures/blob/master/challenges-and-data-structures/Data-Structures/Trees/LargestLevelValue/README.md#binary-tree---largest-value-at-each-level)
 
 ---
+
+### Challenge 11: Linked List - Rotate by K
+[**Go to Challenge README**](https://github.com/Hassan-Ayman-SE/challenges-and-data-structures/blob/master/challenges-and-data-structures/Data-Structures/LinkedList/RotateLinkedList/README.md#linked-list---rotate-by-k)
+
+---
