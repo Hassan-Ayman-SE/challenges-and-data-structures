@@ -113,6 +113,29 @@ namespace challenges_and_data_structures.Data_Structures.Trees.TreeImplementatio
             return result;
         }
 
+        //Binary Tree - Print Right View
+        public void PrintRightView()
+        {
+            if (Root == null) return;
+
+            Queue<TNode> queue = new Queue<TNode>();
+            queue.Enqueue(Root);
+
+            while (queue.Count > 0)
+            {
+                int levelSize = queue.Count;
+                TNode lastNode = null;
+
+                for (int i = 0; i < levelSize; i++)
+                {
+                    lastNode = queue.Dequeue();
+                    if (lastNode.Left != null) queue.Enqueue(lastNode.Left);
+                    if (lastNode.Right != null) queue.Enqueue(lastNode.Right);
+                }
+
+                Console.Write(lastNode.Data + " ");
+            }
+        }
 
         public void Print(TNode node, string indent = "", bool isLeft = true)
         {

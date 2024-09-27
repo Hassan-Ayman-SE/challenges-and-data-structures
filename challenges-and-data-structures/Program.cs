@@ -14,44 +14,34 @@ namespace challenges_and_data_structures
         static void Main(string[] args)
         {
 
-            // Example 1: Rotate by 2
-            LinkedList list1 = new LinkedList();
-            list1.Add(1);
-            list1.Add(2);
-            list1.Add(3);
-            list1.Add(4);
-            list1.Add(5);
-            list1.Add(6);
-            Console.WriteLine("Original list 1:");
-            list1.PrintList();
-            list1.RotateLeft(2);
-            Console.WriteLine("After rotating by 2:");
-            list1.PrintList();
-            Console.WriteLine("=================================================");
-            // Example 2: Rotate by 3
-            LinkedList list2 = new LinkedList();
-            list2.Add(10);
-            list2.Add(20);
-            list2.Add(30);
-            list2.Add(40);
-            list2.Add(50);
-            Console.WriteLine("Original list 2:");
-            list2.PrintList();
-            list2.RotateLeft(3);
-            Console.WriteLine("After rotating by 3:");
-            list2.PrintList();
-            Console.WriteLine("=================================================");
-            // Example 3: Rotate by 1
-            LinkedList list3 = new LinkedList();
-            list3.Add(5);
-            list3.Add(10);
-            list3.Add(15);
-            list3.Add(20);
-            Console.WriteLine("Original list 3:");
-            list3.PrintList();
-            list3.RotateLeft(1);
-            Console.WriteLine("After rotating by 1:");
-            list3.PrintList();
+            // Example 1 
+            BinaryTree tree1 = new BinaryTree();
+            tree1.Root = new TNode(2);
+            tree1.Root.Left = new TNode(3);
+            tree1.Root.Right = new TNode(5);
+            tree1.Root.Left.Left = new TNode(4);
+            tree1.Root.Right.Right = new TNode(6);
+            tree1.Root.Left.Left.Right = new TNode(7);
+
+            Console.WriteLine("Right View of Tree 1:");
+            tree1.PrintRightView();  // Output: 2 5 6 7
+            Console.WriteLine();
+
+            Console.WriteLine("======================");
+
+            // Example 2 
+            BinaryTree tree2 = new BinaryTree();
+            tree2.Root = new TNode(1);
+            tree2.Root.Right = new TNode(2);
+            tree2.Root.Right.Right = new TNode(3);
+            tree2.Root.Right.Right.Right = new TNode(4);
+
+            Console.WriteLine("Right View of Tree 2:");
+            tree2.PrintRightView();  // Output: 1 2 3 4
+            Console.WriteLine();
+            
+                 
+           
             Console.ReadKey();
 
         }
