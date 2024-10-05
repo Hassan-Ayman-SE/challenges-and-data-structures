@@ -137,6 +137,39 @@ namespace challenges_and_data_structures.Data_Structures.Trees.TreeImplementatio
             }
         }
 
+        // Binary Tree - Level with Maximum Number of Nodes
+        public int FindMaxLevelNodes()
+        {
+            if (Root == null) return -1;
+
+            Queue<TNode> queue = new Queue<TNode>();
+            queue.Enqueue(Root);
+
+            int maxLevel = 0;
+            int maxNodes = 0;
+            int currentLevel = 0;
+
+            while (queue.Count > 0)
+            {
+                int levelSize = queue.Count;
+                if (levelSize > maxNodes)
+                {
+                    maxNodes = levelSize;
+                    maxLevel = currentLevel;
+                }
+
+                for (int i = 0; i < levelSize; i++)
+                {
+                    TNode currentNode = queue.Dequeue();
+                    if (currentNode.Left != null) queue.Enqueue(currentNode.Left);
+                    if (currentNode.Right != null) queue.Enqueue(currentNode.Right);
+                }
+
+                currentLevel++;
+            }
+
+            return maxLevel;
+        }
         public void Print(TNode node, string indent = "", bool isLeft = true)
         {
             if (node == null)
