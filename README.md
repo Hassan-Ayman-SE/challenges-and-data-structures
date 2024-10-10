@@ -131,3 +131,8 @@
 [**Go to Challenge README**](https://github.com/Hassan-Ayman-SE/challenges-and-data-structures/tree/master/challenges-and-data-structures/Data-Structures/Trees/MaxLevelNodes#binary-tree---level-with-maximum-number-of-nodes)
 
 ---
+
+### Challenge 14: Binary Tree - Minimum Depth
+[**Go to Challenge README**](https://github.com/Hassan-Ayman-SE/challenges-and-data-structures/tree/master/challenges-and-data-structures/Data-Structures/Trees/MinimumDepth#binary-tree---minimum-depth)
+
+---
