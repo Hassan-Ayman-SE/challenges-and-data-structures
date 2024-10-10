@@ -170,6 +170,32 @@ namespace challenges_and_data_structures.Data_Structures.Trees.TreeImplementatio
 
             return maxLevel;
         }
+
+        // Binary Tree - Minimum Depth
+        public int FindMinimumDepth()
+        {
+            if (Root == null) return 0;
+
+            Queue<(TNode, int)> queue = new Queue<(TNode, int)>();
+            queue.Enqueue((Root, 1));
+
+            while (queue.Count > 0)
+            {
+                var (node, depth) = queue.Dequeue();
+
+                if (node.Left == null && node.Right == null)
+                    return depth;
+
+                if (node.Left != null)
+                    queue.Enqueue((node.Left, depth + 1));
+
+                if (node.Right != null)
+                    queue.Enqueue((node.Right, depth + 1));
+            }
+
+            return 0;
+        }
+
         public void Print(TNode node, string indent = "", bool isLeft = true)
         {
             if (node == null)
